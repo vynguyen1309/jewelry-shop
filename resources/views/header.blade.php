@@ -56,7 +56,7 @@
                         Hello, <b>{{ Auth::user()->fullname }}</b>
                         <a href="{{ route('logout') }}" class="btn btn-outline-info text-light">Logout</a>
                         {{-- <a href="" class="btn btn-outline-info text-light">Change Password</a> --}}
-                        @if (Auth::user()->role == 'admin')
+                        @if (Auth::user()->role_id == 1)
                             <a href="{{route('admin.home')}}" class="btn btn-success">Admin Panel</a>
                         @endif
                     @endauth
